@@ -6,7 +6,7 @@
     <!-- 配置文件路径 -->
     <properties resource="generatorConfig.properties"/>
     <!--数据库包-->
-    <classPathEntry location="F:\libs\m2\repository\mysql\mysql-connector-java\5.1.15\mysql-connector-java-5.1.15.jar"/>
+    <classPathEntry location="${driverLocation}"/>
 
     <context id="context1" targetRuntime="MyBatis3" defaultModelType="flat">
 
@@ -17,9 +17,9 @@
             <property name="suppressJavaInterface" value="false"/>
         </plugin>
 
-        <plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin"/>
+        <!--<plugin type="com.softwareloop.mybatis.generator.plugins.LombokPlugin"/>-->
 
-        <plugin type="com.github.tj123.mybatis.generator.CriteriaPlugin"/>
+        <!--<plugin type="com.github.tj123.mybatis.generator.CriteriaPlugin"/>-->
 
         <!-- 这个插件用来在XXXExample类中生成大小写敏感的LIKE方法 -->
         <plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"/>
